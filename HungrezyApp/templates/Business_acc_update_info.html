@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Business Account Information Update</title>
+    <link rel="stylesheet" href="{% static 'business_acc_update_info.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto+Condensed:wght@700&family=Rubik+Spray+Paint&family=Unbounded:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    {% include 'messages.html' %}
+    {% block content %} {% endblock content %}
+    <h1 class="headstyle">Account Information</h1>
+    <form action="" method="POST">
+        <fieldset class="fieldstyle">
+            {% csrf_token %}
+
+            <label for="name">Username: </label><br>
+            <input type="text" name="name" placeholder="Enter your username for this account" required>
+        </fieldset>
+    {% comment %} </form> {% endcomment %}
+    <h1 class="headstyle2">Update Information</h1>
+    {% comment %} <form action="" method="POST"> {% endcomment %}
+        <fieldset class="fieldstyle2">
+            {%csrf_token%}
+
+            <label for="address">Address: </label><br>
+            <textarea name="address" id="address" cols="30" rows="7" placeholder="Enter your new address"></textarea>
+            <br>
+
+            <label for="contact_no">Contact Number: </label><br>
+            <input type="text" name="contact_no" placeholder="Enter your new contact number">
+            <br>
+
+            <label for="restaurant_name">Restaurant Name: </label><br>
+            <input type="text" name = "restaurant_name" placeholder="Enter new restaurant name">
+            <br>
+
+            <label for="new_pass">New Password: </label><br>
+            <input type="password" name = "new_pass" placeholder="Enter your new password">
+            <br>
+
+            <label for="c_new_pass">Confirm New Password: </label><br>
+            <input type="password" name = "c_new_pass" placeholder="Confirm your new password">
+            <br>
+            
+        </fieldset>
+        <fieldset class="fieldstyle">
+
+            <label for="password">Password: </label><br>
+            <input type="password" name="password" placeholder="Enter your account password to confirm" required>
+            <button class="btn">Confirm</button>
+
+        </fieldset>
+
+    </form>
+</body>
+</html>

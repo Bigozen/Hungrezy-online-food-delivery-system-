@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SignUp As</title>
+<link rel="stylesheet" href="{% static 'signupas.css' %}">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Piedra&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class=" div1">
+        <img src="{% static 'sign_up_cover.jpg' %}" alt="sign up cover image">
+    </div>
+    <div class="div2">
+
+        <div >
+            <center>
+                <h1 class="logtxt">Sign Up As...</h1>
+                    <div class="nav">
+                        <ul>
+                            <li><a href="/customer-account-signup">Custormer Account</a></li>
+                            <li><a href="/business-account-signup">Business Account</a></li>
+                            <li><a href="/rider-account-signup">Rider Account</a></li>
+                        </ul>
+                        <button id="csubmit"><a href="/home" > Home Page</a></button>
+                
+                    </div>
+                    
+            </center>
+            
+        </div>
+    </div>
+</body>

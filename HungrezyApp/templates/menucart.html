@@ -1,0 +1,167 @@
+{%load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover">
+    <title>Menu</title>
+    <link rel="stylesheet" href="{% static 'menucart.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+    <!-- desktop view -->
+    <div class="container" id="container">
+        <div id="menu">
+            <div class="title">
+                <img src="{% static '/images/logo.jpg' %}" alt="" id="logo">
+                <h1>Hungrezy</h1>
+            </div>
+            <div class="menu-item">
+                <a href="#">About</a>
+                <a href="#">Restaurants</a>
+                <a href="#">Contact</a>
+                
+            </div>
+        </div>
+
+        <div id="food-container">
+            <div id="header">
+                <div class="add-box">
+                    <i class="fa fa-map-marker your-address" id="add-address"> Your Address</i>
+                </div>
+                <div class="util">
+                    <i class="fa fa-cart-plus" id="cart-plus"> 0 Items</i>
+                </div>
+            </div>
+            <div id="food-items">
+                <div id="pizzaburg">
+                    <p id="category-name">Pizzaburg</p> 
+                    <div class="border"></div>    
+                </div>
+
+                <div id="kacchibhai">
+                    <p id="category-name">Kacchi Bhai</p>    
+                    <div class="border"></div> 
+                </div>
+
+                <div id="sultan">
+                    <p id="category-name">Sultan's Dine</p>
+                    <div class="border"></div> 
+                </div>
+
+                <div id="khanas" >
+                    <p id="category-name">Khana's</p> 
+                    <div class="border"></div> 
+                </div>
+
+                <div id="crimson" class="d-crimson">
+                    <p id="category-name">Crimson Cup</p> 
+                    <div class="border"></div> 
+                </div>
+
+                <div id="ozz" >
+                    <p id="category-name">Ozz Cafe</p>
+                    <div class="border"></div> 
+                </div>
+            </div>
+
+            <div id="cart-page" class="cart-toggle">
+                <p id="cart-title">Cart Items</p>
+                <p id="m-total-amount">Total Amout : 100</p>
+                <table>
+                    <thead>
+                        <td>Item</td>
+                        <td>Name</td>
+                        <td>Quantity</td>
+                        <td>Price</td>
+                    </thead>
+                    <tbody id="table-body">
+                        
+                    </tbody>
+                </table>
+                <div class="btn-box">
+                    <button class="cart-btn">
+                        Checkout</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="cart">
+            <div class="taste-header">
+                <div class="user">
+                    <i class="fa fa-user-circle" id="circle"> Account</i>
+                    
+                </div>
+            </div>
+            <div id="category-list">
+                <p class="item-menu">Go For Hunt</p>
+                <div class="border"></div>                
+            </div>
+            <div id="checkout" class="cart-toggle">
+                <p id="total-item">Total Item : 5</p>
+                <p id="total-price"></p>
+                <button class="cart-btn">Checkout</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- mobile view -->
+    <div id="mobile-view" class="mobile-view">
+        <div class="mobile-top">
+            <div class="logo-box">
+                <img src="/images/foodielogo.png" alt="" id="logo">
+                <i class="fa fa-map-marker your-address" id="m-add-address"> Your Address</i>
+            </div>
+            <div class="top-menu">
+                <i class="fa fa-search"></i>
+                <i class="fa fa-tag"></i>
+                <i class="fa fa-heart-o"></i>
+                <i class="fa fa-cart-plus" id="m-cart-plus"> 0</i>
+            </div>
+        </div>
+        
+        <div class="item-container">
+            <div class="category-header" id="category-header">  
+            </div>
+
+            <div id="food-items" class="food-items">
+                <div id="pizzaburg" class="m-pizzaburg">
+                    <p id="category-name">Pizzaburg</p>    
+                </div>
+                <div id="kacchibhai" class="m-kacchibhai">
+                    <p id="category-name">Kacchi Bhai</p>    
+                </div>
+                <div id="sultan" class="m-sultan">
+                    <p id="category-name">Sultan's Dine</p>
+                </div>
+                
+                <div id="khanas" class="m-khanas">
+                    <p id="category-name">Khana's</p> 
+                </div>
+                
+                <div id="crimson" class="m-crimson">
+                    <p id="category-name">Crimson Cup</p> 
+                </div>
+                <div id="ozz" class="m-ozz">
+                    <p id="category-name">Ozz Cafe</p>
+                </div>
+            </div>            
+        </div>
+
+        <!-- <div class="mobile-footer">
+            <p>Home</p>
+            <p>Cart</p>
+            <p>offers</p>
+            <p>orders</p>
+        </div> -->
+    </div>
+    <script src="{% static '/js/menucart.js' %}" type="module"></script>
+    <!-- <script>
+        window.location = <custom thank you page>
+        </script> -->
+</body>
+</html>

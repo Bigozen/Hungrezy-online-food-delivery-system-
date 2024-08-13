@@ -1,0 +1,8 @@
+* {
+    box-sizing: border-box;
+}
+
+fieldset {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 5000px;
+}

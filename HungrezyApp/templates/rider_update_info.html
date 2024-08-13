@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Rider Information Update</title>
+</head>
+<body>
+
+    <h1>Account Information</h1>
+    <form action="" method="POST">
+        <fieldset>
+            {%csrf_token%}
+
+            <label for="name">Username: </label>
+            <input type="text" name="name" placeholder="Enter your username for this account" required>
+        </fieldset>
+    {% comment %} </form> {% endcomment %}
+    <h1>Update Information</h1>
+    {% comment %} <form action="" method="POST"> {% endcomment %}
+        <fieldset>
+            {%csrf_token%}
+
+            <label for="address">Address: </label>
+            <textarea name="address" id="address" cols="30" rows="7" placeholder="Enter your new address"></textarea>
+            <br>
+
+            <label for="contact_no">Contact Number: </label>
+            <input type="text" name="contact_no" placeholder="Enter your new contact number">
+            <br>
+
+            <label for="delivary_method">Delivary Method: </label>
+            <select name="delivary_method" id="delivary_method" placeholder="Select type">
+                <option value=""></option>
+                <option value="cycle">Cycle</option>
+                <option value="bike">Bike</option>
+            </select>
+            <br>
+            
+        </fieldset>
+        <fieldset>
+
+            <label for="password">Password: </label>
+            <input type="password" name="password" placeholder="Enter your account password to confirm" required>
+            <br>
+
+        </fieldset>
+
+        <button>Confirm</button>
+    </form>
+</body>
+</html>
